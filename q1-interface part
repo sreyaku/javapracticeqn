@@ -1,0 +1,26 @@
+package bankingquestion;
+
+public class Banking implements iBanking {
+		String Nameofcustomer;
+		String Typeofdeposit;
+		int baseAmount;
+
+		// Parameterized constructor for initialization
+		public Banking(String Nameofcustomer, String Typeofdeposit, int baseAmount) {
+			this.baseAmount = baseAmount;
+			this.Nameofcustomer = Nameofcustomer;
+			this.Typeofdeposit = Typeofdeposit;
+
+		}// depositingtheAmount(depositAmount –add the base amount)
+
+		public int depositAmount(int amount) {
+			amount = baseAmount + amount;
+			return amount;
+		}// withdrawaloftheAmount(withdrawAmount –subtract the base amount)
+
+		public int withdrawAmount(int amount) {
+			amount = baseAmount - amount;
+			return amount;
+		}
+	}
+
