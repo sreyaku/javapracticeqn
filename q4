@@ -1,0 +1,65 @@
+package studentrecord;
+
+/**
+ * @author acer
+ *
+ */
+import java.util.*;
+public class StudentRecord {
+	
+		int rollNo;
+		String name;
+
+		public static void main(String[] args) {
+			// storing,sorting and reversing the elements.
+			
+			@SuppressWarnings("resource")
+			Scanner sr = new Scanner(System.in);
+			StudentRecord obj = new StudentRecord();
+			ArrayList<Integer> Id = new ArrayList<Integer>(); 
+			//  ArrayList object
+			HashMap<Integer, String> Details = new HashMap<Integer, String>();// Create an HashMap object
+			TreeSet<String> al = new TreeSet<String>(); 
+			// TreeSet object
+			try {
+				while (true) {
+					System.out.println("\nEnter one of the following choices:");
+					System.out.println("Your choices :\n 1-Insert data \n 2-Exit");
+					int choice = sr.nextInt();
+					// input roll number and name
+					if (choice == 1) {
+						System.out.print("Enter a Rollno:");
+						obj.rollNo = sr.nextInt();
+						System.out.print("Enter a Student Name:");
+						obj.name = sr.next();
+						Details.put(obj.rollNo, obj.name);
+						// User input storing in HashMap
+						Id.add(obj.rollNo);
+						// Roll numberstore in arraylist
+					} else if (choice == 2) {
+						System.out.println("Thank you");
+						break;
+					} else {
+						System.out.println(" enter a valid number \n");
+					}
+				}
+				Collections.sort(Id);
+				// Sort the ArratList and print
+				for (int i = 0; i < Id.size(); i++) {
+					System.out.println("Roll Number: " + Id.get(i) + " Name: " + Details.get(Id.get(i)));
+					al.add(Details.get(Id.get(i)));
+					// Store the elements in TreeSet
+				}
+				// Reverse the TreeSet and print
+				Iterator i = al.descendingIterator();
+				System.out.println("Names in the reverse order.");
+				while (i.hasNext()) {
+					System.out.println(i.next());
+				}
+			} catch (Exception e) {
+				System.out.println("Something wrong!! Try again.");
+			}
+		}
+	}
+
+
