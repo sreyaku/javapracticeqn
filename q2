@@ -1,0 +1,46 @@
+package typecasting;
+
+public class TypeCasting {
+public static void main(String[] args) {//widening casting
+		   int valueenteredasInt = 9000;
+		   double valueconvertedtoDouble = valueenteredasInt; // Automatic casting: int to double
+		   System.out.println("inputed int value is"+valueenteredasInt);
+		   System.out.println(valueenteredasInt);      // Outputs 9
+		   System.out.println("inputed int value is converted to double as "+valueenteredasInt);
+		   System.out.println(valueconvertedtoDouble);   // Outputs 9.0
+		   
+		   //narrowing casting
+		   
+		   double valueinputedasDouble = 9.78d;
+		    int valuetobeconvertedasInt = (int) valueinputedasDouble ; // Manual casting: double to int
+		    System.out.println("inputed double value is"+valueinputedasDouble);
+		    System.out.println(valueinputedasDouble );   // Outputs 9.78
+		    System.out.println("outputed int value is"+valuetobeconvertedasInt);
+		    System.out.println(valuetobeconvertedasInt);      // Outputs 9
+		    
+		    
+		 // create int type variable
+		    int inputnum = 1000;
+		    System.out.println("The integer value is: " + inputnum);
+
+		    // converts int to string type
+		    String outputstringdata = String.valueOf(inputnum);
+		    System.out.println("The string value is: " + outputstringdata);
+		    
+		    
+		    
+		    // create string type variable
+		    String inputstringdata = "1090";
+		    System.out.println("The string value is: " + inputstringdata);
+
+		    // convert string variable to int
+		    int outputintnum = Integer.parseInt(inputstringdata);
+		    System.out.println("The integer value is: " + outputintnum);
+		  }
+		
+		  }
+		
+		  
+	
+
+
